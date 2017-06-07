@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string product = "Samsung Galaxy";
+            int price = 700;
+            int buyQuantity = 0;
+            int cost = 0;
+            string answer = "";
+
+
+            Console.WriteLine("How many {0} will you buy?", product);
+            buyQuantity = int.Parse(Console.ReadLine());
+
+            cost = price * buyQuantity;
+
+            Console.WriteLine("The cost of {0} will be {1} eur", product, cost);
+
+            Console.WriteLine("Will you want to buy? Yes/No");
+            answer = Console.ReadLine();
+
+            answer = answer.ToLower();
+
+            if (answer == "yes")
+            {
+                Console.WriteLine("Congratulations! You just bought {0} {1} of {2} eur", buyQuantity, product, cost);
+            }
+            else
+            {
+                Console.WriteLine("Goodbye!");
+
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
